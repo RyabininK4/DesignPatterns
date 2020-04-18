@@ -109,7 +109,7 @@ class ViewController: UIViewController {
             return false
         }
         do {
-            try data.write(to: directory.appendingPathComponent("fileName.png")!)
+            try data.write(to: directory.appendingPathComponent("image.svg")!)
             return true
         } catch {
             return false
