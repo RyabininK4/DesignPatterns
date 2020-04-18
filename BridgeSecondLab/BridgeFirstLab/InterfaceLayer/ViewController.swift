@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVGKit
 
 class ViewController: UIViewController {
     
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
     // MARK: - Utils
     
     func saveImage(image: UIImage) -> Bool {
-        guard let data = image.pngData() else {
+        guard let data = image.svgData() else {
             return false
         }
         guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
