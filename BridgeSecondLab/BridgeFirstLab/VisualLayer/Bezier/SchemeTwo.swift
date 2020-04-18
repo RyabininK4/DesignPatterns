@@ -33,29 +33,34 @@ class SchemeTwo: VisualizationScheme {
     }
     
     override func drawStartPoint(point: Point) {
-        
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0)
         imageView.image?.draw(in: imageView.bounds)
         
         let context = UIGraphicsGetCurrentContext()
-        context?.setLineWidth(5.0)
-        context?.setStrokeColor(UIColor.green.cgColor)
-        context?.addRect(CGRect(x: point.getX(), y: point.getY(), width: 5, height: 5))
-        context?.strokePath()
+        context?.saveGState()
+        context?.setFillColor(UIColor.green.cgColor)
+        context?.fillEllipse(in: CGRect(x: point.getX(), y: point.getY(), width: 5, height: 5))
+        context?.restoreGState()
 
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
     }
     
     override func drawEndPoint(point: Point) {
-        
+
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0)
         imageView.image?.draw(in: imageView.bounds)
-        
+
         let context = UIGraphicsGetCurrentContext()
-        context?.setLineWidth(5.0)
         context?.setStrokeColor(UIColor.green.cgColor)
-        context?.addRect(CGRect(x: point.getX(), y: point.getY(), width: 5, height: 5))
+        context?.setLineCap(CGLineCap.round)
+        context?.setLineWidth(2.0)
+        context?.setBlendMode(CGBlendMode.normal)
+
+        context?.move(to: CGPoint(x: point.getX() + 5, y: point.getY() + 5))
+        context?.addLine(to: CGPoint(x: point.getX(), y: point.getY()))
+        context?.addLine(to: CGPoint(x: point.getX() - 5, y: point.getY() + 5))
+
         context?.strokePath()
 
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
