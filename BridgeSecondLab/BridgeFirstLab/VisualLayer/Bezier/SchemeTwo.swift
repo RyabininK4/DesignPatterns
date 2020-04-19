@@ -39,7 +39,7 @@ class SchemeTwo: VisualizationScheme {
         let context = UIGraphicsGetCurrentContext()
         context?.saveGState()
         context?.setFillColor(UIColor.green.cgColor)
-        context?.fillEllipse(in: CGRect(x: point.getX(), y: point.getY(), width: 5, height: 5))
+        context?.fillEllipse(in: CGRect(x: point.getX(), y: point.getY(), width: 4, height: 4))
         context?.restoreGState()
 
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -57,9 +57,9 @@ class SchemeTwo: VisualizationScheme {
         context?.setLineWidth(2.0)
         context?.setBlendMode(CGBlendMode.normal)
 
-        context?.move(to: CGPoint(x: point.getX() + 5, y: point.getY() + 5))
+        context?.move(to: CGPoint(x: point.getX() + 4, y: point.getY() + 4))
         context?.addLine(to: CGPoint(x: point.getX(), y: point.getY()))
-        context?.addLine(to: CGPoint(x: point.getX() - 5, y: point.getY() + 5))
+        context?.addLine(to: CGPoint(x: point.getX() - 4, y: point.getY() + 4))
 
         context?.strokePath()
 
