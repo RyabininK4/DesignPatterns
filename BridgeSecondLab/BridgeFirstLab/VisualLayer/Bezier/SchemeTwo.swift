@@ -12,6 +12,7 @@ import UIKit
 class SchemeTwo: VisualizationScheme {
     
     var imageView: UIImageView!
+    var svgScheme = SVGSheme()
     
     override func drawLineSegment(start: Point, end: Point) {
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0)
@@ -30,6 +31,11 @@ class SchemeTwo: VisualizationScheme {
 
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        // FOR SVG
+        
+        svgScheme.contextLine = context
+        svgScheme.drawLineSegment(start: start, end: end)
     }
     
     override func drawStartPoint(point: Point) {
@@ -44,6 +50,11 @@ class SchemeTwo: VisualizationScheme {
 
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        // FOR SVG
+        
+        svgScheme.contextStartPoint = context
+        svgScheme.drawStartPoint(point: point)
     }
     
     override func drawEndPoint(point: Point) {
@@ -65,5 +76,10 @@ class SchemeTwo: VisualizationScheme {
 
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        // FOR SVG
+        
+        svgScheme.contextEndPoint = context
+        svgScheme.drawEndPoint(point: point)
     }
 }

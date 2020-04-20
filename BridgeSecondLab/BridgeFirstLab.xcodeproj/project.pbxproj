@@ -26,6 +26,7 @@
 		EDBF7465244638E900D63ADC /* VisualCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF7464244638E900D63ADC /* VisualCurve.swift */; };
 		EDBF74672446394900D63ADC /* VisualLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF74662446394900D63ADC /* VisualLine.swift */; };
 		EDBF746F24465D1200D63ADC /* VisualBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF746E24465D1200D63ADC /* VisualBezier.swift */; };
+		EDC264E5244D753700CA67D1 /* SVGScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC264E4244D753700CA67D1 /* SVGScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		EDBF7464244638E900D63ADC /* VisualCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualCurve.swift; sourceTree = "<group>"; };
 		EDBF74662446394900D63ADC /* VisualLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualLine.swift; sourceTree = "<group>"; };
 		EDBF746E24465D1200D63ADC /* VisualBezier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualBezier.swift; sourceTree = "<group>"; };
+		EDC264E4244D753700CA67D1 /* SVGScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				EDBF7464244638E900D63ADC /* VisualCurve.swift */,
 				ED2E3E30244AF4C000312FED /* VisualizationScheme.swift */,
 				ED2E3E32244AF51B00312FED /* VScheme.swift */,
+				EDC264E4244D753700CA67D1 /* SVGScheme.swift */,
 			);
 			path = VisualLayer;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				EDBF7460244634A200D63ADC /* Bezier.swift in Sources */,
 				ED2FB472244B6D63007CBD47 /* SchemeOne.swift in Sources */,
 				EDBF745624462C7800D63ADC /* IPoint.swift in Sources */,
+				EDC264E5244D753700CA67D1 /* SVGScheme.swift in Sources */,
 				EDBF745A24462F1700D63ADC /* Point.swift in Sources */,
 				EDBF7465244638E900D63ADC /* VisualCurve.swift in Sources */,
 				EDBF745824462DA000D63ADC /* ICurve.swift in Sources */,

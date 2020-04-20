@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVGKit
 
 class ViewController: UIViewController {
     
@@ -17,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondImageView: UIImageView!
     @IBOutlet weak var firstSaveButton: UIButton!
     @IBOutlet weak var secondSaveButton: UIButton!
+    
+    let firstScheme = SchemeOne()
+    let secondScheme = SchemeTwo()
     
     
     // MARK: - Lifecycle
@@ -38,10 +40,9 @@ class ViewController: UIViewController {
         let a = Point(x: 0, y: 0)
         let b = Point(x: 200, y: 200)
         
-        let vScheme = SchemeOne()
-        vScheme.imageView = firstImageView
+        firstScheme.imageView = firstImageView
         
-        let line = VisualLine(a: a, b: b, scheme: vScheme, n: 8)
+        let line = VisualLine(a: a, b: b, scheme: firstScheme, n: 8)
         line.drawFigure()
     }
     
@@ -51,10 +52,9 @@ class ViewController: UIViewController {
         let c = Point(x: 34, y: 134)
         let d = Point(x: 184, y: 134)
         
-        let vScheme = SchemeTwo()
-        vScheme.imageView = secondImageView
+        secondScheme.imageView = secondImageView
         
-        let bezier = VisualBezier(a: a, b: b, c: c, d: d, scheme: vScheme, n: 8)
+        let bezier = VisualBezier(a: a, b: b, c: c, d: d, scheme: secondScheme, n: 8)
         bezier.drawFigure()
     }
     
@@ -74,45 +74,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveFirstAction(_ sender: Any) {
-        guard let image = firstImageView.image else { return }
+
+        let file = firstScheme.svgScheme.svgFile
+        file.write(to: FileManager.default.appendingPathComponent("svgFileOne.txt"))
         
-        if saveImage(image: image) {
-            firstSaveButton.setTitle("Файл сохранен", for: .normal)
-            firstSaveButton.isEnabled = false
-            firstSaveButton.backgroundColor = .lightGray
-        } else {
-            firstSaveButton.setTitle("Файл не сохранен", for: .normal)
-        }
+        firstSaveButton.setTitle("Файл сохранен", for: .normal)
+        firstSaveButton.isEnabled = false
+        firstSaveButton.backgroundColor = .lightGray
     }
     
     @IBAction func saveSecondAction(_ sender: Any) {
-        guard let image = secondImageView.image else { return }
         
-        if saveImage(image: image) {
-            secondSaveButton.setTitle("Файл сохранен", for: .normal)
-            secondSaveButton.isEnabled = false
-            secondSaveButton.backgroundColor = .lightGray
-        } else {
-            secondSaveButton.setTitle("Файл не сохранен", for: .normal)
-        }
-    }
-    
-    
-    
-    // MARK: - Utils
-    
-    func saveImage(image: UIImage) -> Bool {
-        guard let data = image.svgData() else {
-            return false
-        }
-        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
-            return false
-        }
-        do {
-            try data.write(to: directory.appendingPathComponent("image.svg")!)
-            return true
-        } catch {
-            return false
-        }
+        let file = secondScheme.svgScheme.svgFile
+        file.write(to: FileManager.default.appendingPathComponent("svgFileTwo.txt"))
+        
+        secondSaveButton.setTitle("Файл сохранен", for: .normal)
+        secondSaveButton.isEnabled = false
+        secondSaveButton.backgroundColor = .lightGray
     }
 }
