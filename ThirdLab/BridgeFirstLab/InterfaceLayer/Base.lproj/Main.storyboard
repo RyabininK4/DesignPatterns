@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BridgeFirstLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Схема визуализации 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-OX-Cyb">
+                                <rect key="frame" x="117" y="64" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Схема визуализации 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBE-dE-TbO">
+                                <rect key="frame" x="116" y="361" width="182" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-XL-SYm">
+                                <rect key="frame" x="82" y="93" width="250" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="BU4-fQ-NBZ"/>
+                                    <constraint firstAttribute="height" constant="200" id="bGD-nM-Bz9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-Zz-HFa">
+                                <rect key="frame" x="82" y="301" width="250" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PP7-GV-4NB"/>
+                                </constraints>
+                                <state key="normal" title="Сохранить файл">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveFirstAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRH-xJ-dGq"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i6R-IL-b4p">
+                                <rect key="frame" x="82" y="390" width="250" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BD0-uI-ulw"/>
+                                    <constraint firstAttribute="width" constant="250" id="U9N-Pt-ycn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rr-Si-VPJ">
+                                <rect key="frame" x="82" y="598" width="250" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tFF-dN-GVs"/>
+                                </constraints>
+                                <state key="normal" title="Сохранить файл">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveSecondAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEa-4m-7Cx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-SG-ShL">
+                                <rect key="frame" x="82" y="806" width="250" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uR6-KY-Grk"/>
+                                </constraints>
+                                <state key="normal" title="Генерация кривых">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="generationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CsV-QE-WR7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoM-cT-YB0">
+                                <rect key="frame" x="82" y="756" width="250" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D33-TJ-cST"/>
+                                </constraints>
+                                <state key="normal" title="Совместить фрагменты">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="combineAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9PI-Za-IhP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQf-0a-fYy">
+                                <rect key="frame" x="82" y="706" width="250" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="c67-6c-SQA"/>
+                                </constraints>
+                                <state key="normal" title="Сместить фрагмент кривой">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="displaceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuX-7h-M9H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHt-VJ-aJG">
+                                <rect key="frame" x="82" y="656" width="250" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Qp1-4p-CHF"/>
+                                </constraints>
+                                <state key="normal" title="Поменять начало и конец">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeStartFinishPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DCy-gc-beD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Rr-Si-VPJ" firstAttribute="leading" secondItem="i6R-IL-b4p" secondAttribute="leading" id="0SE-B1-lKc"/>
+                            <constraint firstItem="qoM-cT-YB0" firstAttribute="leading" secondItem="SB7-SG-ShL" secondAttribute="leading" id="0cC-vT-9MP"/>
+                            <constraint firstItem="2YU-OX-Cyb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7VE-WN-G6e"/>
+                            <constraint firstItem="yBE-dE-TbO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="92t-ca-B3z"/>
+                            <constraint firstItem="qoM-cT-YB0" firstAttribute="trailing" secondItem="SB7-SG-ShL" secondAttribute="trailing" id="B3H-PJ-vPJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SB7-SG-ShL" secondAttribute="bottom" constant="16" id="CvV-xU-YYs"/>
+                            <constraint firstItem="mQf-0a-fYy" firstAttribute="leading" secondItem="SB7-SG-ShL" secondAttribute="leading" id="DiW-b2-f3j"/>
+                            <constraint firstItem="yBE-dE-TbO" firstAttribute="top" secondItem="IEZ-Zz-HFa" secondAttribute="bottom" constant="20" id="OOU-QJ-apa"/>
+                            <constraint firstItem="IEZ-Zz-HFa" firstAttribute="leading" secondItem="vWw-XL-SYm" secondAttribute="leading" id="aT2-oz-zZt"/>
+                            <constraint firstItem="i6R-IL-b4p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bD1-UU-f92"/>
+                            <constraint firstItem="4Rr-Si-VPJ" firstAttribute="top" secondItem="i6R-IL-b4p" secondAttribute="bottom" constant="8" id="cJZ-Uz-8Zg"/>
+                            <constraint firstItem="SB7-SG-ShL" firstAttribute="top" secondItem="qoM-cT-YB0" secondAttribute="bottom" constant="10" id="ecK-C0-d8x"/>
+                            <constraint firstItem="mQf-0a-fYy" firstAttribute="trailing" secondItem="SB7-SG-ShL" secondAttribute="trailing" id="fvv-Au-7Vu"/>
+                            <constraint firstItem="4Rr-Si-VPJ" firstAttribute="trailing" secondItem="i6R-IL-b4p" secondAttribute="trailing" id="jJH-aR-zYi"/>
+                            <constraint firstItem="SB7-SG-ShL" firstAttribute="trailing" secondItem="4Rr-Si-VPJ" secondAttribute="trailing" id="jQ9-mw-hzc"/>
+                            <constraint firstItem="2YU-OX-Cyb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jas-Th-61R"/>
+                            <constraint firstItem="vWw-XL-SYm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jgV-Ot-Jji"/>
+                            <constraint firstItem="WHt-VJ-aJG" firstAttribute="trailing" secondItem="SB7-SG-ShL" secondAttribute="trailing" id="m2I-dy-mZb"/>
+                            <constraint firstItem="qoM-cT-YB0" firstAttribute="top" secondItem="mQf-0a-fYy" secondAttribute="bottom" constant="10" id="mTo-Js-KPe"/>
+                            <constraint firstItem="WHt-VJ-aJG" firstAttribute="leading" secondItem="SB7-SG-ShL" secondAttribute="leading" id="qYZ-7Z-b7x"/>
+                            <constraint firstItem="mQf-0a-fYy" firstAttribute="top" secondItem="WHt-VJ-aJG" secondAttribute="bottom" constant="10" id="sJx-Go-lyg"/>
+                            <constraint firstItem="SB7-SG-ShL" firstAttribute="leading" secondItem="4Rr-Si-VPJ" secondAttribute="leading" id="tyr-ys-iqL"/>
+                            <constraint firstItem="IEZ-Zz-HFa" firstAttribute="top" secondItem="vWw-XL-SYm" secondAttribute="bottom" constant="8" id="ulH-ka-SuZ"/>
+                            <constraint firstItem="vWw-XL-SYm" firstAttribute="top" secondItem="2YU-OX-Cyb" secondAttribute="bottom" constant="8" id="wjP-EN-r3d"/>
+                            <constraint firstItem="i6R-IL-b4p" firstAttribute="top" secondItem="yBE-dE-TbO" secondAttribute="bottom" constant="8" id="xRT-bx-eU9"/>
+                            <constraint firstItem="IEZ-Zz-HFa" firstAttribute="trailing" secondItem="vWw-XL-SYm" secondAttribute="trailing" id="yK7-W0-FWQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="vWw-XL-SYm" id="nXy-hA-rYO"/>
+                        <outlet property="firstSaveButton" destination="IEZ-Zz-HFa" id="1g8-kq-8Uv"/>
+                        <outlet property="secondImageView" destination="i6R-IL-b4p" id="ZQo-VH-PHF"/>
+                        <outlet property="secondSaveButton" destination="4Rr-Si-VPJ" id="P6a-NC-hnU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+</document>
