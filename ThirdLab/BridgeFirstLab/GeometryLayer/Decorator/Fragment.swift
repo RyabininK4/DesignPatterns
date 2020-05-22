@@ -23,18 +23,9 @@ class Fragment: Decorator {
         
         var tParam = t
         
-        if max(t, tStart) == tStart {
-            tParam = tStart
-        } else if min(t, tFinish) == tFinish {
-            tParam = tFinish
+        if (0.0 < tParam) && (tParam < 1.0) {
+            tParam = tStart + t * (tFinish - tStart)
         }
-//
-//        Вариант предложенный преподавателем
-//
-//        if (0.0 < tParam) && (tParam < 1.0) {
-//            tParam = tStart + t * (tFinish - tStart)
-//        }
-//
         
         return iCurve.getPoint(t: tParam)
     }
